@@ -2,26 +2,28 @@ import sys
 from collections import deque
 
 def BFS(graph,color,flag):
-    stack = deque()
+    queue = deque()
     visited = []
 
-    stack.append(list(graph.keys())[0])
+    queue.append(list(graph.keys())[0])
 
-    while stack :
-        node = stack.pop()
+    while queue :
+        node = queue.popleft()
         if node not in visited :
-            print(node,'not visited')
             visited.append(node)
-            stack.extend(graph.pop(node))
+            next = graph.pop(node)
+            queue.extend(next)
+            if color[node] == -1:
+                color[node] = flag
+            else :
+                flag = color[node]
             flag = not flag
-            color[node] = flag
-            print(color)
-        else :
-            print(node,'visited')
-            if color[node] == flag:
-                print('겹침',color[node],flag)
-                return graph,color,flag,'NO'
-        print(node,graph, color)
+            for n in next :
+                if color[n] == -1 :
+                    color[n] = flag
+                else :
+                    if color[node] == color[n]:
+                        return graph,color,flag,'NO'
 
                 
     return graph,color,flag,'YES'
@@ -44,7 +46,6 @@ for _ in range(K):
     flag = False
     while graph :
         graph,color,flag,result=BFS(graph,color,flag)
-        print('end bfs')
         if result == 'NO':
             break
     print(result)
