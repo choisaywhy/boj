@@ -1,26 +1,22 @@
-# 제귀로 도전할 것
+# checked와 visited를 합치는 방향으로 다시 고민
+
 import sys
 from collections import deque
 
-def DFS(graph,start,checked):
+def DFS(graph,start,checked,team):
     stack = deque([start])
-    visited = []
-    teams = 0
-
+    visited = [] # 현재 탐색 경로를 지나는 node
+    
     while stack :
         node = stack.pop()
-        if checked[node] :
-            for v in set(visited):
-                checked[v] = True
+        if checked[node] : # 이미 검증이 완료된 경로이므로, checked 추가 후 Return
+            if node not in team :
+                teams = len(visited)-visited.index(node)
             return teams, checked
-        if node not in visited :
-            visited.append(node)
+        else : # 경로 탐색
+            checked[node] = True
             stack.extend(graph[node])
-        else :
-            for v in set(visited):
-                checked[v] = True
-            teams = len(visited)-visited.index(node)
-            return teams, checked
+
 
 
 input = sys.stdin.readline
@@ -31,18 +27,18 @@ for _ in range(T):
     arr = list(map(int,input().split()))
     graph = {}
 
-    for i in range(N):
+    for i in range(N): # graph 생성
         graph[i+1] = [arr[i]]
 
-    checked = []
-    team = 0
+    checked = [False for _ in range(N+1)] # 경로 탐색이 완료된 node = True else False
+    team = []
     for start in range(1,N+1):
-        if not checked[start] :
-            teams, checked = DFS(graph,start,checked)
-            team += teams
+        if not checked[start] : # 검증하지 않은 노드만 DFS
+            teams, checked = DFS(graph,start,checked,team)
+            team += teams # 팀원 수 세기
     print(N-team)
-
-
+    
+    
 
 # import sys
 # from collections import deque
