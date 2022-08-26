@@ -1,44 +1,44 @@
 import sys
 from collections import deque
 
-directions = [(0,1),(0,-1),(1,0),(-1,0)]
+dx = [-1,0,1]
+dy = [-1,0,1]
 
 def BFS(graph, start):
     queue = deque([start])
     visited = []
+
     while queue :
         nx,ny = queue.popleft()
         if [nx,ny] not in visited:
-            for d in directions:
-                x,y = d
-                x,y = nx + x, ny + y
-                if ( 0 <= x < N) and ( 0 <= y < N) :
-                    if graph[x][y] :
-                        queue.append([x,y])
+            for x in dx :
+                for y in dy :
+                    gx,gy = nx + x, ny + y
+                    if ( 0 <= gx < len(graph)) and ( 0 <= gy < len(graph[0])) :
+                        if graph[gx][gy] :
+                            queue.append([gx,gy])
             graph[nx][ny] = False
             visited.append([nx,ny])
-    return len(visited), graph
+    return graph
         
 
 
-
-
 input = sys.stdin.readline
-N = int(input())
-graph = []
-for _ in range(N):
-    graph.append(list(map(lambda x: True if x=="1" else False, str(input().rstrip()))))
+W ,H = 1,1
 
+while True :
+    W, H = map(int,input().split())
+    if not W or not H :
+        break
+    graph = []
+    for _ in range(H):
+        graph.append(list(map(lambda x: False if not x else True, list(map(int,input().split())) )))
 
-town = []
-for x in range(N):
-    for y in range(N):
-        if graph[x][y] :
-            count = 0
-            count, graph = BFS(graph,[x,y])
-            town.append(count)
-            
-
-print(len(town))
-for t in sorted(town) :
-    print(t)
+    
+    island = 0
+    for x in range(H):
+        for y in range(W):
+            if graph[x][y] :
+                graph = BFS(graph,[x,y])
+                island += 1
+    print(island)
