@@ -1,3 +1,59 @@
+import sys
+from collections import deque
+
+input = sys.stdin.readline
+directions = [(1,0),(-1,0),(0,1),(0,-1)]
+M,N = map(int,input().split())
+
+
+def BFS(box):
+    queue = deque()
+    # visitied = deque()
+    day = 0 # 날짜 
+    riped = 0 # 익은 토마토 개수 
+
+    for x in range(N) :
+        for y in range(M) :
+            if box[x][y] == 1 : # 초기 1을 모두 queue에 넣음
+                queue.append((x,y,day))
+    while queue :
+        nx,ny,day = queue.popleft()
+        for d in directions :
+            x, y = d[0] + nx, d[1] + ny
+            if (0 <= x < N) and (0 <= y < M) : # 상하좌우 모든 방향 iter
+                if not box[x][y]: # 방문하려는 노드가 익지 않은 토마토이고, 방문한적이 없으면
+                    box[x][y] = 1
+                    queue.append((x,y,day+1))
+                    # visitied.append((x,y))
+                    riped += 1 # 익은 토마토 개수
+    return riped, day
+
+
+box = []
+raw = 0
+for _ in range(N):
+    box.append(list(map(int, input().split())))
+    raw += box[_].count(0) # 익지 않은 토마토 개수 total
+
+if not raw : # 익지 않은 토마토가 없으면 print 0
+    print(0)
+else : # 익지 않은 토마토가 있으면
+    riped, day = BFS(box)
+    if not (raw - riped) : # (초기 익지 않은 토마토 수) - (시간이 지나 익은 토마토 수) 가 0 이면 == 모든 익지 않은 토마토가 익었으면
+        print(day)
+    else : # 익지 않은 토마토가 존재하면
+        print(-1)
+    
+
+
+
+
+
+
+
+
+
+
 # queue 사용 없이 진행
 # import sys
 # from collections import deque
