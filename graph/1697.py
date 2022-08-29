@@ -12,11 +12,9 @@ def BFS(start, target):
     while queue :
         node = queue.popleft()
         for next in [node-1, node+1, node*2] :
-            if distance[next]:
-                continue
             if next == target :
                 return distance[node] + 1
-            if 0 <= next <= 100000 :
+            if 0 <= next <= 100000 and not distance[next]:
                 queue.append(next)
                 distance[next] = distance[node] + 1
 
@@ -42,11 +40,9 @@ def BFS(start, target):
     while queue :
         node,time = queue.popleft()
         for next in [node-1, node+1, node*2] :
-            if visited[next]:
-                continue
             if next == target :
                 return time + 1
-            if 0 <= next <= 100000 :
+            if 0 <= next <= 100000 and not visited[next]:
                 queue.append((next,time+1))
                 visited[next] = True
 
