@@ -14,6 +14,8 @@ for i in range(1,N+1):
     heapq.heapify(heap)
     if i <= 2:
         print('answer',heapq.heappop(heap))
+        print('answer',heapq.heappop(heap))
+
         continue
 
     for _ in range(i//2 + i%2):
