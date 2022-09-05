@@ -14,7 +14,6 @@ for index in range(N) :
         if index < N - 2 and A[index+1] <= A[index+2]:
             
             while A[index] :
-                print('3연속')
                 A[index] -= 1
                 A[index+1] -= 1
                 A[index+2] -= 1
@@ -22,14 +21,12 @@ for index in range(N) :
         else :
             
             while A[index] :
-                print('2연속')
                 A[index] -= 1
                 A[index + 1] -= 1
                 cost += 5
         
     if index == N - 1 or (index < N - 1 and not A[index+1]):
         while A[index] :
-            print('나만')
             A[index] -= 1
             cost += 3
     
