@@ -1,3 +1,5 @@
+
+# debugging
 import sys
 import heapq as hq
 from collections import deque
@@ -27,17 +29,18 @@ def BFS(cave, node) :
     return False, move(cave, visited) # 바닥에 닿지 않은 경우, 공중에 떠있는 모든 클러스터의 정보를 함께 넘김
 
 def move(cave, cluster) :
-    height = 0
+    height = R
     for x in range(R-1,-1,-1) :
         for y in range(0,C) : # 아래 있는 클러스터를 먼저 이동시키기 위해 역순으로 실행
             if not cluster[x][y] :
                 continue
             count = 0
             for i in range(x+1, R) :
-                if cave[i][y] != '.' :
+                if cave[i][y] != '.' and not cluster[i][y]:
                     break
                 count += 1
             height = min(count, height)
+            print('다같이 움직여야 하는 ',height,x,y)
     print(cluster)
     for x in range(R) :
         for y in range(C):
@@ -59,7 +62,7 @@ for height in list(map(int, input().split())) :
             continue
     else : # right -> left
         try :
-            destroy_y = cave[R - height][::-1].index('x')
+            destroy_y = C - (cave[R - height][::-1].index('x')+1)
         except : 
             continue
 
@@ -68,6 +71,7 @@ for height in list(map(int, input().split())) :
     if destroy_x == 0 : # 위로 연결된 클러스터가 없는 경우
         continue
     
+    print('막대기와 부딫힌 좌표는',destroy_x,destroy_y)
 
     ### 해당 좌표가 부서진 이후 처리가 중요함!!!!################ 221017
     for dx, dy in directions :
@@ -79,11 +83,10 @@ for height in list(map(int, input().split())) :
     else :
         print('부서짐')
 
-print(cave)
+for r in range(R):
+    print("".join(cave[r]))
 
-
-        
-
+# 예제2번 5,4, 5,5 좌표 x 사라짐 오류,
 
 
 
