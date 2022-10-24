@@ -9,10 +9,11 @@ for _ in range(T) :
     reverse = False
     p = str(input().strip())
     n = int(input())
+    array = input().strip()
     if not n :
         array = []
     else :
-        array = deque(str(input().strip())[1:-1].split(","))
+        array = deque(str(array)[1:-1].split(","))
     for op in p :
         if op == "R" :
             reverse = not reverse
