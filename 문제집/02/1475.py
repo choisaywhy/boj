@@ -1,5 +1,4 @@
-# https://www.acmicpc.net/workbook/view/7287
-
+# https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog
 import sys
 from collections import Counter
 input = sys.stdin.readline

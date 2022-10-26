@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog
+
 import sys
 from collections import deque
 
