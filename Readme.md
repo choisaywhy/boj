@@ -5,3 +5,7 @@
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 04 진행 중
 - boj 5430 런타임 에러, 질문 답변 기다리는 중
 - boj 2504 진행 중
+#### 221026
+- [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 04 진행 중
+- boj 2493 진행 중
+- Singleton pattern python 작성 완료

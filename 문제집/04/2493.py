@@ -25,5 +25,4 @@ tops = list(map(int,input().split()))
 #     if len(answer) != h+1 :
 #         answer.append(0)
 
-# for an in answer :
-#     print(an, end=' ')
+# print(" ".join(answer), sep="")
