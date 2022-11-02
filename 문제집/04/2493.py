@@ -1,11 +1,25 @@
 # https://www.acmicpc.net/workbook/view/7289
 
 import sys
+from collections import deque
 
 input = sys.stdin.readline
 
 N = int(input())
 tops = list(map(int,input().split()))
+stack = deque()
+answer = deque()
+for i in range(N) :
+    while stack and tops[stack[-1]] < tops[i] :
+        stack.pop()
+    if stack :
+        answer.append(stack[-1] + 1)
+    else :
+        answer.append(0)
+    stack.append(i)
+
+print(" ".join(list(map(str, answer))))
+        
 
 
 

@@ -8,14 +8,19 @@ stack = deque()
 res = 0
 
 for i in range(N-1,-1,-1) :
-    flag = False
+    eql = 0
     print('i',i,'heights',heights[i])
-    while stack and heights[stack[-1]] < heights[i] :
+    while stack and heights[stack[-1]] <= heights[i] :
+        if heights[stack[-1]] == heights[i] :
+            eql += 1
+        res += 1
         stack.pop()
+
+    if eql :
+        res += eql
+    elif not eql and stack :
         res += 1
-        flag = True
-    if stack:
-        res += 1
+
     print(res,'res')
 
     stack.append(i)
