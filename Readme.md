@@ -13,3 +13,8 @@
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 05 진행 중
 - boj 3015 진행 중 (동일 높이 처리에 대해 고민 해볼 것)
 - kruscal 알고리즘 블로그 게시 완료
+#### 221104
+- [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 05 진행 중
+- boj 3015 완
+- 카카오 프로그래머스 기출 풀이
+- 카카오 인턴십 코딩 테스트 
