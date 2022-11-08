@@ -17,4 +17,8 @@
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 05 진행 중
 - boj 3015 완
 - 카카오 프로그래머스 기출 풀이
-- 카카오 인턴십 코딩 테스트 
+- 카카오 인턴십 코딩 테스트
+#### 221108
+- [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 05 완료
+- [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 06 진행 중
+

@@ -1,3 +1,6 @@
+# 9 out of 15 
+# 6 time out
+
 #!/bin/python3
 
 import math

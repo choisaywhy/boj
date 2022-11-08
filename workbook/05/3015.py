@@ -27,8 +27,9 @@ for i in range(N-1,-1,-1) :
         stack.append((i, 1))
         res += 1
 
-
 print(res)
+
+
 
 
 # import sys 
@@ -62,11 +63,13 @@ print(res)
 # print(res)
 
 
+
+
 # import sys 
 # from collections import deque
 
 # input = sys.stdin.readline
-# N = int(input())
+# N = int(input().strip())
 # heights = [int(input()) for _ in range(N)]
 # stack = deque()
 # res = 0
@@ -156,4 +159,28 @@ print(res)
 
 #     stack.append(i)
 #     print(stack,'stack')
+# print(res)
+
+
+
+# import sys 
+# from collections import deque
+
+# input = sys.stdin.readline
+# N = int(input())
+# heights = [int(input()) for _ in range(N)]
+# stack = deque()
+# res = 0
+
+# for i in range(N-1,-1,-1) :
+#     flag = False
+#     while stack and heights[stack[-1]] <= heights[i] :
+#         stack.pop()
+#         flag = True
+#     if stack :
+#         res += stack[-1] - i
+#     elif not stack and flag :
+#         res += N - (i+1)
+
+#     stack.append(i)
 # print(res)

@@ -1,3 +1,4 @@
+# all clear
 #!/bin/python3
 
 import math
