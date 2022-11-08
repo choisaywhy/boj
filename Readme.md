@@ -20,5 +20,6 @@
 - 카카오 인턴십 코딩 테스트
 #### 221108
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 05 완료
-- [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 06 진행 중
+- [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 06(큐) 완료
+- [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
 
