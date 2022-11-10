@@ -22,4 +22,6 @@
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 05 완료
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 06(큐) 완료
 - [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
-
+#### 221110
+- [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
+- boj 2477 진행 중
