@@ -24,4 +24,8 @@
 - [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
 #### 221110
 - [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
-- boj 2477 진행 중
+- boj 2447 진행 중
+#### 221114
+- [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
+- boj 2447 완
+- boj 2448 진행 중
