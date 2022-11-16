@@ -29,3 +29,6 @@
 - [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
 - boj 2447 완
 - boj 2448 시간 초과, 질문 답변 기다리는 중
+#### 221114
+- [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
+- boj 2448 완
