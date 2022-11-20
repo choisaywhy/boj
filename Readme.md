@@ -32,3 +32,7 @@
 #### 221114
 - [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
 - boj 2448 완
+#### 221120
+- [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
+- boj 16684 진행 중
+- 카카오 모빌리티 신입 공채 서류 제출
