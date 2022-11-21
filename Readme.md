@@ -36,3 +36,7 @@
 - [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 진행 중
 - boj 16684 진행 중
 - 카카오 모빌리티 신입 공채 서류 제출
+#### 221121
+- [문제집](https://www.acmicpc.net/workbook/view/7291) 06(재귀) 완료(임시)
+- [문제집](https://www.acmicpc.net/workbook/view/7311) 07(덱) 완료
+- boj 15649 백트래킹 적용하여 풀어보기
