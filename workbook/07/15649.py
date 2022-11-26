@@ -1,9 +1,28 @@
 import sys
-from itertools import combinations
+from collections import deque
 
 input = sys.stdin.readline
 
+def DFS(N, start) :
+    stack = deque([start])
+    visited = [False for _ in range(N)]
+
+    while stack :
+        node = stack.pop()
+        if not visited[node] :
+            print(node, sep=" ")
+            visited[node] = True
+            for i in range(N) :
+                if visited[i] :
+                    continue
+                stack.append(i)
+    return stack               
+    
+
+
 N, M = map(int, input().split())
 
-for c in list(combinations([str(i) for i in range(1,N+1)], M)) :
-    print(" ".join(c))
+for i in range(N) :
+    DFS(N, i)
+    print()
+#     print(DFS(N, i))
