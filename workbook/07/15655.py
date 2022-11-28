@@ -1,19 +1,15 @@
 import sys
 
 def solution(N, M, arr):
-
-    def DFS(res) :
-
+    def DFS(num, res) :
         if len(res) == M :
             print(" ".join(res))
             return
+        
+        for i in range(num, N) :
+            DFS(i+1, res+[str(arr[i])])
 
-        for i in range(N) :
-            if arr[i] in res :
-                continue
-            DFS(res+[str(arr[i])])  
-    DFS([])
-
+    DFS(0,[])
 
 if __name__ == "__main__" :
     input = sys.stdin.readline
