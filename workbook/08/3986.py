@@ -1,24 +1,17 @@
+# 반례 없는 제대로된 방식을 고안하면 됨
 import sys
-import re
 
 def solution(N, words):
     count = 0
     for word in words :
         stack = []
-        flag = True
         for w in word :
-            if not stack or w not in stack:
-                stack.append(w)
+            if stack and w == stack[-1] :
+                stack.pop()
                 continue
-            if w == "A" :
-                if stack.pop() != 'A' :
-                    flag = False
-                    break
-            elif w == "B" :
-                if stack.pop() != 'B' :
-                    flag = False
-                    break
-        if flag and not stack :
+            stack.append(w)
+                
+        if not stack :
             count += 1
     print(count)
 
