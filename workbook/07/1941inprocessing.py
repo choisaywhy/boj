@@ -6,16 +6,18 @@ import sys
 def solution() :
     directions = [(1,0), (-1,0), (0,1), (0,-1)]
     def DFS(x, y, countY, depth) :
-        print(x,y,seats[x][y],'turn')
+        nonlocal count
+        print(x,y,seats[x][y],depth,'turn')
 
         # 백트래킹 부분 또한 손봐야함
         if countY >= 4 :
             print('Y is already full')
             return 
 
-        if depth == 7 :
-            print('depth completed')
+        if depth == 6 :
+            print('===============depth completed')
             count += 1
+            print(count,'<-- count')
             return
 
         for dx, dy in directions :
@@ -27,6 +29,7 @@ def solution() :
                     DFS(nx, ny, countY, depth+1)
                 else :
                     DFS(nx, ny, countY+1, depth+1)
+                visited[nx][ny] = False
 
 
     seats = []
@@ -39,14 +42,15 @@ def solution() :
     
     if len(party) < 4:
         print(0)
-    else :
-        visited = [[False]*5 for _ in range(5)]
-        count = 0
-        for p in party :
-            px, py = p
-            DFS(px, py, 0, 0)
-            visited[px][py] = True # px, py 를 지나는 모든 행선을 파악했으므로, 더이상 탐색 안함
-        print(count)
+        return
+
+    visited = [[False]*5 for _ in range(5)]
+    count = 0
+    for p in party :
+        px, py = p
+        visited[px][py] = True # px, py 를 지나는 모든 행선을 파악했으므로, 더이상 탐색 안함
+        DFS(px, py, 0, 0)
+    print(count)
 
 
 
