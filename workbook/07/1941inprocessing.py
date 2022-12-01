@@ -14,7 +14,7 @@ def solution() :
             print('Y is already full')
             return 
 
-        if depth == 6 :
+        if depth == 7 :
             print('===============depth completed')
             count += 1
             print(count,'<-- count')
@@ -36,6 +36,7 @@ def solution() :
     party = []
     for x in range(5) :
         seats.append(list(str(input().strip())))
+
         for y in range(5) :
             if seats[x][y] == "S" :
                 party.append((x,y))
@@ -49,7 +50,7 @@ def solution() :
     for p in party :
         px, py = p
         visited[px][py] = True # px, py 를 지나는 모든 행선을 파악했으므로, 더이상 탐색 안함
-        DFS(px, py, 0, 0)
+        DFS(px, py, 0, 1)
     print(count)
 
 

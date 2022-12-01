@@ -1,7 +1,10 @@
 # StudyLog
+#### 221201
+- [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
+- boj 1941 진행 중
 #### 221130
 - [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
-- boj 1941 진행 중, debugging mode로 시도
+- boj 1941 진행 중, debugging mode로 시도할 것
 #### 221129
 - [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
 - boj 15663 완, 블로그 정리 완
