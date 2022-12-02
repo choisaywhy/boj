@@ -1,4 +1,7 @@
 # StudyLog
+#### 221202
+- [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
+- CS 준비
 #### 221201
 - [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
 - boj 1941 진행 중
