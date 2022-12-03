@@ -1,4 +1,8 @@
 # StudyLog
+#### 221203
+- 카카오 모빌리티 코딩 테스트 2차
+- [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
+- [문제집](https://www.acmicpc.net/workbook/view/7313) 09(BFS) 진행 중
 #### 221202
 - [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
 - CS 준비
