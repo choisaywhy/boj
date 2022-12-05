@@ -1,6 +1,7 @@
 # StudyLog
 #### 221205 
 - [문제집](https://www.acmicpc.net/workbook/view/7313) 09(BFS) 진행 중
+- [문제집](https://www.acmicpc.net/workbook/view/7293) 08(정렬) 완
 #### 221204
 - [문제집](https://www.acmicpc.net/workbook/view/7313) 09(BFS) 진행 중
 - boj 1941 완
@@ -20,6 +21,7 @@
 - boj 1941 진행 중, debugging mode로 시도할 것
 #### 221129
 - [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
+- [문제집](https://www.acmicpc.net/workbook/view/7312) 08(스택의 활용) 완
 - boj 15663 완, 블로그 정리 완
 - boj 3986 완
 - boj 1941 진행 중, 백조의 호수 풀이 참고하여 고민해볼 것
