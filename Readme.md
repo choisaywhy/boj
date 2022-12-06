@@ -3,7 +3,7 @@
 - [문제집](https://www.acmicpc.net/workbook/view/7313) 09(BFS) 진행 중
 - [solvedAC CLASS](https://solved.ac/class) 01 해결 중
 - boj 26142 (workbook) 진행 중
-- boj 1018 (lv 2) 진행 중
+- boj 1018 완
 #### 221205 
 - [문제집](https://www.acmicpc.net/workbook/view/7313) 09(BFS) 진행 중
 - [문제집](https://www.acmicpc.net/workbook/view/7293) 08(정렬) 완
