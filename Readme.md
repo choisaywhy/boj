@@ -1,4 +1,7 @@
 # StudyLog
+#### 221212
+- [문제집](https://www.acmicpc.net/workbook/view/7292) 07(백트래킹, 시뮬레이션) 진행 중
+- boj 14499 완
 #### 221209
 - [solvedAC CLASS](https://solved.ac/class) 03 완
 #### 221208
