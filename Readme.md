@@ -1,8 +1,11 @@
 # StudyLog
+#### 221227
+- [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
+- boj 9251 완
 #### 221225
 - [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
 - boj 1003 완
-
+- boj 9251 진행 중
 #### 221222
 - [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
 - boj 1003 진행 중(시간초과)
