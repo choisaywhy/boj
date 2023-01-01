@@ -1,4 +1,6 @@
 # StudyLog
+#### 230101
+- [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
 #### 221231
 - [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
 #### 221227
