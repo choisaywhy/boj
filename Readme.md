@@ -1,4 +1,6 @@
 # StudyLog
+#### 230102
+- [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
 #### 230101
 - [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
 - boj 2294 완, 틀린 코드 분석 하기
