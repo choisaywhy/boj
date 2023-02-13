@@ -1,4 +1,7 @@
 # StudyLog
+#### 230213
+- [문제집](https://www.acmicpc.net/workbook/view/7320) 11(그리디) 진행 중
+- [BOJ 6588](https://www.acmicpc.net/problem/6588) 재채점 이슈로 다시 풀기
 #### 230212
 - [문제집](https://www.acmicpc.net/workbook/view/7320) 11(그리디) 진행 중
 #### 230210
@@ -34,7 +37,7 @@
 - boj 9251 완
 #### 221225
 - [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
-- boj 1003 완`
+- boj 1003 완
 - boj 9251 진행 중
 #### 221222
 - [문제집](https://www.acmicpc.net/workbook/view/7294) 09(다이나믹 프로그래밍) 진행 중
