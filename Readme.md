@@ -1,4 +1,7 @@
 # StudyLog
+#### 230214
+- [문제집](https://www.acmicpc.net/workbook/view/7320) 11(그리디) 진행 중
+- boj 11501 완
 #### 230213
 - [문제집](https://www.acmicpc.net/workbook/view/7320) 11(그리디) 진행 중
 - [BOJ 6588](https://www.acmicpc.net/problem/6588) 재채점 이슈로 다시 풀기
