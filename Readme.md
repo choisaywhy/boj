@@ -1,4 +1,6 @@
 # StudyLog
+#### 230216
+- [BOJ 6588](https://www.acmicpc.net/problem/6588) 재채점 후 시간초과 해결
 #### 230215
 - [문제집](https://www.acmicpc.net/workbook/view/7320) 11(그리디) 진행 중
 #### 230214
