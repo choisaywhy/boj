@@ -1,4 +1,6 @@
 # StudyLog
+#### 230222
+- [문제집](https://www.acmicpc.net/workbook/view/7303) 12(최소 신장 트리) 진행 중
 #### 230221
 - [문제집](https://www.acmicpc.net/workbook/view/7302) 11(위상 정렬) 완
 - Topological sort 블로그 게시 완료
