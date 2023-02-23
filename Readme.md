@@ -1,4 +1,7 @@
 # StudyLog
+#### 230223
+- [문제집](https://www.acmicpc.net/workbook/view/7303) 12(최소 신장 트리) 완
+- boj 17472 완
 #### 230222
 - [문제집](https://www.acmicpc.net/workbook/view/7303) 12(최소 신장 트리) 진행 중
 #### 230221
