@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 
 def solution(N,M,maps):
     islands = [0,0]
@@ -20,7 +19,6 @@ def solution(N,M,maps):
                         visited.append((nx,ny))
                         stack.append((nx,ny))
                         maps[nx][ny] = curnum
-        visited.sort()
         return (visited, curnum)
 
 
@@ -78,6 +76,8 @@ def solution(N,M,maps):
         union(a,b)
         ans += dist
         count += 1
+        if count == len(islands)-3 :
+            break
 
     if ans == 0 or count < len(islands)-3:
         print(-1)
