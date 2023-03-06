@@ -28,12 +28,22 @@ def solution(n, k, maps, l, shift):
         snake.appendleft((nx,ny)) # 머리 갱신
         maps[nx][ny] = 's'
 
-        # 방향 바꾸기
+        # 방향 바꾸기-1
         if shift.get(second, False):
             if shift[second] == "D":
-                cur_dir = (cur_dir+1) % 4
+                cur_dir += 1
+                if cur_dir == 4 :
+                    cur_dir = 0  
             elif shift[second] == "L":
-                cur_dir = (cur_dir-1) % 4
+                cur_dir -= 1
+                if cur_dir == -1 :
+                    cur_dir = 3
+        # 방향 바꾸기-2
+        # if shift.get(second, False):
+        #     if shift[second] == "D":
+        #         cur_dir = (cur_dir+1) % 4
+        #     elif shift[second] == "L":
+        #         cur_dir = (cur_dir-1) % 4
 
         second += 1
 
