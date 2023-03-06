@@ -5,50 +5,36 @@ def solution(N,M,r,c,d,room):
     cleaner = (r,c,d)
     ans = 0
 
-    def check_clean(x,y) :
-        if room[x][y] == 0 :
-            return True
-        return False
-
     while True :
         r,c,d = cleaner
         dr, dc = directions[d]
         flag = False
-        print(r,c,d,'turn')
         
         # 1. 해당 칸 청소
         if room[r][c] == 0 :
-            print('not cleaned yet')
             room[r][c] = -1
             ans += 1
-            print(ans,'ans updated')
         
         # 2,3. 주변 탐색
+        nd = d
         for _ in range(4) :
-            nd = (d+3) % 4
-            if check_clean(r+nr, c+nc):
-                print('near by not cleaned yet',r+nr, c+nc, k)
-                cleaner = (r + nr,  c + nc, k)
-                print('cleaner updated',cleaner)
-                flag = True
-                break
+            nd = (nd+3) % 4
+            nr, nc = directions[nd]
+            if room[r+nr][c+nc] != 0:
+                continue
+            cleaner = (r + nr, c + nc, nd)
+            flag = True
+            break
         if flag :
             continue
 
-        # 3
+        # 2
         if room[r-dr][c-dc] != 1 :
-            print('can go back')
             cleaner = (r-dr, c-dc, d)
-            print('cleaner updated',cleaner)
             continue
-        else :
-            break
+        break
     
     print(ans)
-
-
-                
-
 
 
 
