@@ -1,69 +1,214 @@
+# third trial with remembering x,y
+# 2788ms -> 248ms vs deepcopy
+# deepcopy is quit heavy
 import sys
-from copy import deepcopy
 
-def solution(N,M,office,cctv):
-    directions = {1 : [[0], [1], [2], [3]],
-                  2 : [[1,3], [0,2]],
-                  3 : [[0,1], [1,2], [2,3], [3,0]],
-                  4 : [[0,1,2], [1,2,3], [2,3,0], [3,0,1]],
-                  5 : [[0,1,2,3]]}
-    
-    points = [(-1,0),(0,1),(1,0),(0,-1)]
-    
-    def check_visited(temp_office,x,y,direct) :
-        for d in direct :
-            dx, dy = points[d][0], points[d][1]
-            while True :
-                x += dx
-                y += dy
-                if not (0 <= x < N and 0 <= y < M) :
+def solution(N,M,office,walls,cctv):
+    directions = {1 : [[(0,1)], [(0,-1)], [(1,0)], [(-1,0)]],
+                2 : [[(0,1),(0,-1)], [(1,0),(-1,0)]],
+                3 : [[(-1,0),(0,1)], [(0,1),(1,0)], [(1,0),(0,-1)], [(0,-1),(-1,0)]],
+                4 : [[(0,-1),(-1,0),(0,1)], [(0,-1),(1,0),(0,1)], [(1,0),(0,1),(-1,0)], [(1,0),(0,-1),(-1,0)]],
+                5 : [[(0,1),(0,-1),(1,0),(-1,0)]]}
+
+    def check_watched(x, y, direct):
+        count = 0
+        stack = []
+        for d in direct:
+            dx, dy = d
+            now = (x,y)
+            while True:
+                nx,ny = now
+                if not ( 0 <= nx + dx < N and 0 <= ny + dy < M ):
                     break
-                if temp_office[x][y] == 6 :
+                if office[nx+dx][ny+dy] == 6:
                     break
-                elif temp_office[x][y] == 0 :
-                    temp_office[x][y] = '#'
+                elif office[nx+dx][ny+dy] == 0:
+                    office[nx+dx][ny+dy] = '#'
+                    count += 1
+                    stack.append((nx+dx, ny+dy))
+                now = (nx+dx, ny+dy)
+
+        return (count, stack)
+
+    def DFS(depth, watched):
+        nonlocal ans
+        if depth == len(cctv):
+            ans = min(ans, N*M - walls - len(cctv) - watched)
+            return
+        cctv_type, x, y = cctv[depth]
+        for direct in directions[cctv_type]:
+            count, stack = check_watched(x, y, direct)
+            DFS(depth+1, watched+count)
+            while stack :
+                ex, ey = stack.pop()
+                office[ex][ey] = 0
+            
 
     ans = N*M
-
-    def dfs(depth, office) :
-        nonlocal ans
-        if depth == len(cctv) :
-            count = 0
-            for i in range(N) :
-                count += office[i].count(0)
-            ans = min(ans, count)
-            return
-        
-        
-        temp_office = deepcopy(office)
-        cctv_type, x, y = cctv[depth]
-        for direct in directions[cctv_type] :
-            check_visited(temp_office, x,y,direct)
-            dfs(depth+1, temp_office)
-            temp_office = deepcopy(office)
-    
-    dfs(0, office)
+    DFS(0, 0)
     print(ans)
 
 
 
 if __name__ == "__main__" :
     input = sys.stdin.readline
-    N, M = map(int, input().split())
+    N,M = map(int, input().split())
     office = []
+    walls = 0
     cctv = []
-    cctv_num = 0
     for x in range(N):
         office.append(list(map(int, input().split())))
         for y in range(M):
-            if 1 <= office[x][y] <= 5 :
+            if 1 <= office[x][y] <= 5:
                 cctv.append((office[x][y], x, y))
+            elif office[x][y] == 6:
+                walls += 1
 
-    solution(N,M,office,cctv)
+    solution(N,M,office,walls,cctv)
+
+
+
+# second trial with deepcopy
+# import sys
+# from copy import deepcopy
+
+# def solution(N,M,office,walls,cctv):
+#     directions = {1 : [[(0,1)], [(0,-1)], [(1,0)], [(-1,0)]],
+#                 2 : [[(0,1),(0,-1)], [(1,0),(-1,0)]],
+#                 3 : [[(-1,0),(0,1)], [(0,1),(1,0)], [(1,0),(0,-1)], [(0,-1),(-1,0)]],
+#                 4 : [[(0,-1),(-1,0),(0,1)], [(0,-1),(1,0),(0,1)], [(1,0),(0,1),(-1,0)], [(1,0),(0,-1),(-1,0)]],
+#                 5 : [[(0,1),(0,-1),(1,0),(-1,0)]]}
+
+#     def check_watched(x, y, direct, office):
+#         count = 0
+#         for d in direct:
+#             dx, dy = d
+#             now = (x,y)
+#             while True:
+#                 nx,ny = now
+#                 if not ( 0 <= nx + dx < N and 0 <= ny + dy < M ):
+#                     break
+#                 if office[nx+dx][ny+dy] == 6:
+#                     break
+#                 elif office[nx+dx][ny+dy] == 0:
+#                     office[nx+dx][ny+dy] = '#'
+#                     count += 1
+#                 now = (nx+dx, ny+dy)
+
+#         return (office, count)
+
+#     def DFS(depth, office, watched):
+#         nonlocal ans
+#         if depth == len(cctv):
+#             ans = min(ans, N*M - walls - len(cctv) - watched)
+#             return
+#         cctv_type, x, y = cctv[depth]
+#         copied = deepcopy(office)
+#         for direct in directions[cctv_type]:
+#             copied, count = check_watched(x, y, direct, copied)
+#             DFS(depth+1, copied, watched+count)
+#             copied = deepcopy(office)
+
+#     ans = N*M
+#     DFS(0, office, 0)
+#     print(ans)
+
+
+
+# if __name__ == "__main__" :
+#     input = sys.stdin.readline
+#     N,M = map(int, input().split())
+#     office = []
+#     walls = 0
+#     cctv = []
+#     for x in range(N):
+#         office.append(list(map(int, input().split())))
+#         for y in range(M):
+#             if 1 <= office[x][y] <= 5:
+#                 cctv.append((office[x][y], x, y))
+#             elif office[x][y] == 6:
+#                 walls += 1
+
+#     solution(N,M,office,walls,cctv)
 
 
 
 
+# debugging ver of second trial
+# import sys
+# from copy import deepcopy
+
+# def solution(N,M,office,walls,cctv):
+#     directions = {1 : [[(0,1)], [(0,-1)], [(1,0)], [(-1,0)]],
+#                 2 : [[(0,1),(0,-1)], [(1,0),(-1,0)]],
+#                 3 : [[(-1,0),(0,1)], [(0,1),(1,0)], [(1,0),(0,-1)], [(0,-1),(-1,0)]],
+#                 4 : [[(0,-1),(-1,0),(0,1)], [(0,-1),(1,0),(0,1)], [(1,0),(0,1),(-1,0)], [(1,0),(0,-1),(-1,0)]],
+#                 5 : [[(0,1),(0,-1),(1,0),(-1,0)]]}
+
+#     def check_watched(x, y, direct, office):
+#         count = 0
+#         for d in direct:
+#             dx, dy = d
+#             now = (x,y)
+#             while True:
+#                 nx,ny = now
+#                 print(nx,ny,'turn')
+#                 if not ( 0 <= nx + dx < N and 0 <= ny + dy < M ):
+#                     print('out of range break')
+#                     break
+#                 if office[nx+dx][ny+dy] == 6:
+#                     print('met wall break')
+#                     break
+#                 elif office[nx+dx][ny+dy] == 0:
+#                     print('void filled')
+#                     office[nx+dx][ny+dy] = '#'
+#                     count += 1
+#                 now = (nx+dx, ny+dy)
+
+#         print('fianl result is',office,count)
+#         return (office, count)
+
+#     def DFS(depth, office, watched):
+#         nonlocal ans
+#         if depth == len(cctv):
+#             print('itered all depth', office)
+#             ans = min(ans, N*M - walls - len(cctv) - watched)
+#             print('ans updated', ans)
+#             return
+#         cctv_type, x, y = cctv[depth]
+#         print(cctv_type,'type cctv',x,y,'turn')
+#         copied = deepcopy(office)
+#         print('searching in office',copied)
+#         for direct in directions[cctv_type]:
+#             print('itering in direct',direct)
+#             copied, count = check_watched(x, y, direct, copied)
+#             DFS(depth+1, copied, watched+count)
+#             copied = deepcopy(office)
+
+#     ans = N*M
+#     DFS(0, office, 0)
+#     print(ans)
+
+
+
+# if __name__ == "__main__" :
+#     input = sys.stdin.readline
+#     N,M = map(int, input().split())
+#     office = []
+#     walls = 0
+#     cctv = []
+#     for x in range(N):
+#         office.append(list(map(int, input().split())))
+#         for y in range(M):
+#             if 1 <= office[x][y] <= 5:
+#                 cctv.append((office[x][y], x, y))
+#             elif office[x][y] == 6:
+#                 walls += 1
+
+#     solution(N,M,office,walls,cctv)
+
+
+# first trial
 # import sys
 
 # def solution(N,M,office,cctv):
