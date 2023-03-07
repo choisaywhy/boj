@@ -1,6 +1,6 @@
 # StudyLog
 #### 230306
-- [문제집](https://www.acmicpc.net/workbook/view/7610) 진행 중
+- [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
 #### 230304
 - [문제집](https://www.acmicpc.net/workbook/view/7610) 진행 중
 - boj 3190 질문 답변 기다리는 중
