@@ -1,6 +1,6 @@
 # third trial with remembering x,y
 # 2788ms -> 248ms vs deepcopy
-# deepcopy is quit heavy
+# deepcopy is quite heavy
 import sys
 
 def solution(N,M,office,walls,cctv):

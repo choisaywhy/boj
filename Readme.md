@@ -1,6 +1,10 @@
 # StudyLog
+#### 230308
+- [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
+- boj14502 [다른 풀이](https://www.acmicpc.net/source/57080913) 참고해 개선할 것
 #### 230307
 - [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
+- boj14500 [다른 풀이](https://data-flower.tistory.com/64) 참고해 개선할 것
 #### 230306
 - [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
 #### 230304
