@@ -1,4 +1,7 @@
 # StudyLog
+#### 230309
+- [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
+- boj14502 [다른 풀이](https://www.acmicpc.net/source/57080913) 참고해 개선할 것
 #### 230308
 - [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
 - boj14502 [다른 풀이](https://www.acmicpc.net/source/57080913) 참고해 개선할 것
