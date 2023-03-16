@@ -1,4 +1,10 @@
 # StudyLog
+
+#### 230316
+- [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
+- Gold1 달성
+#### 230212 - 230215
+- 상반기 서류 작성
 #### 230311
 - [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
 #### 230310
