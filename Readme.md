@@ -1,9 +1,12 @@
 # StudyLog
-
+#### 230320
+- [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
+#### 230317 - 230319
+- SQLD 공부 및 시험 응시
 #### 230316
 - [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
 - Gold1 달성
-#### 230212 - 230215
+#### 230312 - 230315
 - 상반기 서류 작성
 #### 230311
 - [문제집](https://www.acmicpc.net/workbook/view/1152) 진행 중
