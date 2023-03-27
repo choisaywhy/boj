@@ -6,13 +6,14 @@ def solution(N, M, H, ladder):
         return 
         
     def play_ladder():
+        count = 0
         for i in range(1,N+1):
             cur = i
             for j in range(1,H+1):
                 cur += ladder[j][cur]
             if cur != i:
-                return False
-        return True
+                count += 1
+        return count
 
     def DFS(depth, index):
         nonlocal ans
@@ -20,8 +21,13 @@ def solution(N, M, H, ladder):
         if depth >= ans:
             return
         
-        if play_ladder():
+        flag = play_ladder()
+        if flag == 0:
             ans = min(ans, depth)
+            return
+        
+        ##### 핵심 3300ms -> 216ms
+        if flag // 2 - (3 - depth) > 0: # 남은 iter을 다 돌아도 사다리 처리 불가능
             return
         
         for i in range(index, len(bridges)):
@@ -62,6 +68,73 @@ if __name__ == "__main__" :
 
     
     solution(N, M, H, ladder)
+
+
+# success only in pypy3
+# import sys
+
+# def solution(N, M, H, ladder):
+#     if M == 0:
+#         print(0)
+#         return 
+        
+#     def play_ladder():
+#         for i in range(1,N+1):
+#             cur = i
+#             for j in range(1,H+1):
+#                 cur += ladder[j][cur]
+#             if cur != i:
+#                 return False
+#         return True
+
+#     def DFS(depth, index):
+#         nonlocal ans
+
+#         if depth >= ans:
+#             return
+        
+#         if play_ladder():
+#             ans = min(ans, depth)
+#             return
+        
+#         for i in range(index, len(bridges)):
+#             x, y = bridges[i]
+#             if ladder[x][y] != 0:
+#                 continue
+
+#             if y+1 <= N and ladder[x][y+1] != 1:
+#                 ladder[x][y], ladder[x][y+1] = 1, -1
+#                 DFS(depth+1, i+1)
+#                 ladder[x][y], ladder[x][y+1] = 0, 0
+#     ans = 4
+#     bridges = []
+#     for j in range(1,N+1):
+#         for i in range(1,H+1):
+#             if ladder[i][j] != 0:
+#                 continue
+#             if j+1 <= N and ladder[i][j+1] != 1:
+#                 bridges.append((i,j))
+#     DFS(0, 0)
+#     if ans > 3:
+#         print(-1)
+#     else:
+#         print(ans)
+
+
+
+
+
+# if __name__ == "__main__" :
+#     input = sys.stdin.readline
+#     N, M, H = map(int, input().split())
+#     ladder = [[0]*(N+1) for _ in range(H+1)]
+#     for _ in range(M):
+#         a, b = map(int, input().split())
+#         ladder[a][b] = 1 # 오른쪽으로 이어진 사다리
+#         ladder[a][b+1] = -1 # 왼쪽으로 이어진 사다리
+
+    
+#     solution(N, M, H, ladder)
 
 
 # import sys
