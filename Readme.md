@@ -1,4 +1,6 @@
 # StudyLog
+#### 230406
+- [문제집](https://www.acmicpc.net/workbook/view/8708) 진행 중
 #### 230405
 - [문제집](https://www.acmicpc.net/workbook/view/8708) 진행 중
 #### 230403
