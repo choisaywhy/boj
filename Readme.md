@@ -1,4 +1,8 @@
 # StudyLog
+#### 230411
+- [연습 1일차](https://www.acmicpc.net/group/practice/17359) 진행 중
+#### 230407 - 230410
+- 상반기 서류 작성
 #### 230406
 - [문제집](https://www.acmicpc.net/workbook/view/8708) 진행 중
 #### 230405
