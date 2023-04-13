@@ -1,3 +1,4 @@
+# 중위 순회로 풀면 더욱 쉽다고 함
 import sys
 from collections import deque, defaultdict
 
