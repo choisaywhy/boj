@@ -1,4 +1,16 @@
 # StudyLog
+#### 230420
+- [Softeer](https://www.softeer.ai/practice/index.do) 진행 중
+#### 230416 - 230417
+- 상반기 서류 작성
+#### 230415
+- 네이버 코딩 테스트
+#### 230414
+- [연습 4일차](https://www.acmicpc.net/group/practice/17359) 진행 중
+#### 230413
+- [연습 3일차](https://www.acmicpc.net/group/practice/17359) 진행 중
+#### 230412
+- [연습 2일차](https://www.acmicpc.net/group/practice/17359) 진행 중
 #### 230411
 - [연습 1일차](https://www.acmicpc.net/group/practice/17359) 진행 중
 #### 230407 - 230410
