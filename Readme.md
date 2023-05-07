@@ -1,5 +1,7 @@
 # StudyLog
-#### 230420
+#### 230507
+- [문제집](https://www.acmicpc.net/workbook/view/8709) 진행 중
+#### 230420-230430
 - [Softeer](https://www.softeer.ai/practice/index.do) 진행 중
 #### 230416 - 230417
 - 상반기 서류 작성
