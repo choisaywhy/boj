@@ -1,7 +1,7 @@
 # StudyLog
-#### 230507
+#### 230509
 - [소프티어](https://softeer.ai/index.do) 진행 중
-#### 230507
+#### 230508
 - [연습 5일차](https://www.acmicpc.net/group/practice/17359) 진행 중
 #### 230507
 - [문제집](https://www.acmicpc.net/workbook/view/8709) 진행 중
