@@ -21,8 +21,8 @@ def solution(H, W, maps):
                     continue
 
                 stack.append((dx+x,dy+y))
-                maps[dx + x][dy + y] == "." 
-                maps[ndx + x][ndy + y] == "."
+                maps[dx + x][dy + y] = "." 
+                maps[ndx + x][ndy + y] = "."
 
                 if idx == 0:
                     ops.append('A')

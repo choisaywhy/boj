@@ -1,33 +1,75 @@
-import sys 
-from collections import deque
+# 230602 2차 풀이
+import sys
 
-input = sys.stdin.readline
-N = int(input())
-heights = [int(input()) for _ in range(N)]
-stack = deque()
-res = 0
+def solution(N, heights):
 
-for i in range(N-1,-1,-1) :
-    eql = 0
+    stack = []
+    pair = 0
 
-    while stack and heights[stack[-1][0]] < heights[i] :
-        res += stack.pop()[1]
+    for h in heights:
+        while stack and stack[-1][0] < h:
+            pair += stack.pop()[1] # 오른쪽 기준 왼쪽 쌍 더하기
     
-    if not stack :
-        stack.append((i, 1))
-        continue
+        if not stack:
+            stack.append((h,1))
+            continue
+        
+        if stack[-1][0] != h:
+            stack.append((h,1))
+            pair += 1
+        else:
+            eql = stack.pop()[1]
+            pair += eql
+            if stack:
+                pair += 1
+            stack.append((h, eql+1))
 
-    if heights[stack[-1][0]] == heights[i] :
-        eql = stack.pop()[1]
-        res += eql
-        if stack :
-            res+=1
-        stack.append((i, eql + 1))
-    else :
-        stack.append((i, 1))
-        res += 1
 
-print(res)
+    print(pair)
+        
+
+
+if __name__ == "__main__" :
+    input = sys.stdin.readline
+    N = int(input())
+    heights = [int(input()) for _ in range(N)]
+    solution(N, heights)
+
+
+
+
+
+# 1차 정답
+# import sys 
+# from collections import deque
+
+# input = sys.stdin.readline
+# N = int(input())
+# heights = [int(input()) for _ in range(N)]
+# stack = deque()
+# res = 0
+
+# for i in range(N-1,-1,-1) :
+#     eql = 0
+
+#     while stack and heights[stack[-1][0]] < heights[i] :
+#         res += stack.pop()[1]
+    
+#     if not stack :
+#         stack.append((i, 1))
+#         continue
+
+#     if heights[stack[-1][0]] == heights[i] :
+#         eql = stack.pop()[1]
+#         res += eql
+#         if stack :
+#             res+=1
+#         stack.append((i, eql + 1))
+#     else :
+#         stack.append((i, 1))
+#         res += 1
+
+# print(res)
 
 
 

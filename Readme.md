@@ -1,4 +1,6 @@
 # StudyLog
+#### 230602
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 #### 230509
 - [소프티어](https://softeer.ai/index.do) 진행 중
 #### 230508
