@@ -1,4 +1,7 @@
 # StudyLog
+#### 230604
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
+- BOJ17404 진행 중
 #### 230603
 - [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 - BOJ5719 진행 중
