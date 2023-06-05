@@ -1,4 +1,6 @@
 # StudyLog
+#### 230605
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 #### 230604
 - [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 - BOJ17404 진행 중
@@ -240,3 +242,12 @@
 - [문제집](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog) 04 진행 중
 - boj 5430 런타임 에러, 질문 답변 기다리는 중
 - boj 2504 진행 중
+
+
+
+
+-------
+
+
+### 반복할만한 문제
+- [BOJ 17404](https://www.acmicpc.net/problem/17404) / DP
