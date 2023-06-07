@@ -1,4 +1,9 @@
 # StudyLog
+#### 230607
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 이분탐색 진행 중
+- BOJ1654 2nd Trial 풀다가 서버 터짐 ㄷㄷ
+#### 230606
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 #### 230605
 - [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 #### 230604
