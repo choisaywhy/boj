@@ -1,4 +1,9 @@
 # StudyLog
+#### 230611
+- [문제집](https://www.acmicpc.net/workbook/view/8400) 진행 중
+- bisect 라이브러리 뜯어볼 것
+#### 230610
+- [문제집](https://www.acmicpc.net/workbook/view/8400) 진행 중
 #### 230609
 - [문제집](https://www.acmicpc.net/workbook/view/8400) 진행 중
 #### 230608
