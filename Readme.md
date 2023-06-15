@@ -1,4 +1,9 @@
 # StudyLog
+#### 230615
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
+- BOJ20183 다른 풀이 참고하여 시간 줄여볼 것
+#### 230614
+- [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 #### 230613
 - [문제집](https://www.acmicpc.net/workbook/view/10433) 진행 중
 #### 230612
