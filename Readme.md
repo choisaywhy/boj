@@ -1,7 +1,7 @@
 # StudyLog
 #### 230621
 - Gold Random Defence 진행 중
-- BOJ17485 푸는 중
+- BOJ16987 푸는 중
 #### 230620
 - [문제집](https://www.acmicpc.net/workbook/view/7319) 진행 중
 #### 230619
