@@ -1,4 +1,7 @@
 # StudyLog
+#### 230623
+- Gold Random Defence 진행 중
+- BOJ7771 진행 중
 #### 230622
 - Gold Random Defence 진행 중
 - BOJ19236 진행 중
