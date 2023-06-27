@@ -1,4 +1,6 @@
 # StudyLog
+#### 230627
+- Gold Random Defence 진행 중
 #### 230626
 - Gold Random Defence 진행 중
 #### 230625

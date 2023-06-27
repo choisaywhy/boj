@@ -1,4 +1,6 @@
 # 100이 있는 칸만 무조건 채우는 형태 출력
+# sys.exit()로 강제 종료하는 형태
+# 최단 거리 문제로 치환하여 bfs queue break으로 구현하는게 더 가독성 있을 것
 import sys
 from copy import deepcopy
 
@@ -6,10 +8,12 @@ def solution(attack, target):
     
 
     def dfs(depth, board,enable):
-        nonlocal ans
 
         if depth == 11:
-            ans = board
+            for x in range(10):
+                print("".join(board[x]))
+            sys.exit()
+
             return
         
         for x in range(10):
@@ -40,7 +44,6 @@ def solution(attack, target):
     board = [['.']*10 for _ in range(10)]
     enable = [[False]*10 for _ in range(10)]
     ship = {2:1, 3: 1, 4:1, 5:2, 6:2, 7:2, 8:3, 9:3, 10:4}
-    ans = []
 
     tx, ty = target
     board[tx][ty] = "#"
@@ -49,12 +52,7 @@ def solution(attack, target):
             if not( 0 <= tx+ex < 10 and 0 <= ty+ey < 10):
                 continue
             enable[tx+ex][ty+ey] = True
-
     dfs(2, board,enable)
-            
-    print(ans)
-
-
 
 
 if __name__ == "__main__" :
@@ -67,7 +65,7 @@ if __name__ == "__main__" :
         for y in range(10):
             if attack[x][y] == 100:
                 target = (x,y)
-            break
+                break
     solution(attack, target)
 
     
