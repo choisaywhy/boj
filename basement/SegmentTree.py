@@ -1,3 +1,5 @@
+# 구간합 logn
+
 import sys
 input = sys.stdin.readline
 
