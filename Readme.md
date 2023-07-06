@@ -1,4 +1,8 @@
 # StudyLog
+#### 230706
+- Gold Random Defence 진행 중
+#### 230705
+- Gold Random Defence 진행 중
 #### 230630
 - 현대모비스 알고리즘 경진대회 복기
 #### 230629
