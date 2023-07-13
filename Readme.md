@@ -1,8 +1,12 @@
 # StudyLog
+#### 230713
+- Gold Random Defence 진행 중
 #### 230712
 - Gold Random Defence 진행 중
 #### 230711
 - Gold Random Defence 진행 중
+#### 230708
+- 코딩테스트
 #### 230707
 - Gold Random Defence 진행 중
 #### 230706
