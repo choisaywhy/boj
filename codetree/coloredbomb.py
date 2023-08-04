@@ -41,7 +41,7 @@ def solution():
         queue = deque([(x,y)]) # 현재 좌표, 폭탄 수, 빨간색 폭탄 수, 기준점, 경로
         color = board[x][y]
         bomb,red = 1, 0 if board[x][y] != 0 else 1
-        msx,msy = -1,n
+        msx,msy = x,y
         routes = [(x,y)]
         while queue:
             x,y = queue.popleft()
