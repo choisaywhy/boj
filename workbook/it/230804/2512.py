@@ -10,7 +10,6 @@ def solution():
     else: # 상한액 지정
         start = 0
         end = max(req)
-        ans = 0
 
         while start <= end:
             mid = (start+end) // 2
@@ -26,10 +25,9 @@ def solution():
                 end = mid - 1
             else:
                 start = mid + 1
-                ans = mid
             
 
-        print(ans)
+        print(end)
 
 
 
