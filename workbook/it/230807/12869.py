@@ -24,7 +24,7 @@ def solution():
         dp[x][y][z] = attack
 
         for nx,ny,nz in ptt([1,3,9],3):
-            dfs(nx,ny,nz,attack+1)
+            dfs(x-nx,y-ny,z-nz,attack+1)
 
     dfs(hp[0],hp[1],hp[2],0)
     print(ans)
