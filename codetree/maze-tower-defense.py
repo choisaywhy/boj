@@ -27,7 +27,7 @@ def maze_to_linear():
     return linear
 
 def linear_to_maze(linear):
-    nonlocal maze
+    global maze
     new_maze = [[0]*n for _ in range(n)]
 
     x,y = n//2, n//2
@@ -53,7 +53,7 @@ def linear_to_maze(linear):
 
 
 def remove_repeated():
-    nonlocal ans
+    global ans
     linear = maze_to_linear()
     tmp = []
 
@@ -77,8 +77,8 @@ def remove_repeated():
 
 
 def attack(d,p):
-    nonlocal monster
-    nonlocal ans
+    global monster
+    global ans
     x,y = n//2, n//2
 
     for _ in range(p):
@@ -91,7 +91,7 @@ def attack(d,p):
 
 
 def fill_blank():
-    nonlocal maze
+    global maze
     linear = maze_to_linear()
     tmp = []
 
