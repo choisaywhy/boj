@@ -1,5 +1,3 @@
-# https://www.codetree.ai/training-field/frequent-problems/problems/cooling-system/description?page=1&pageSize=20
-
 import sys
 
 input = sys.stdin.readline
@@ -36,6 +34,7 @@ def able_togo(x,y,s): # 가려는 방향이 범위에 있는지, 벽이 있는�
     return False
 
 def spread_coolair(x,y,s): # 각 에어컨에 대해 차가운 공기 뿌리기
+    print("spread_coolair",x,y,s)
     global cool
     visited = [[False]*n for _ in range(n)]
     visited[x+dx[s]][y+dy[s]] = True
@@ -44,8 +43,10 @@ def spread_coolair(x,y,s): # 각 에어컨에 대해 차가운 공기 뿌리기
 
     while stack:
         nx,ny,nc = stack.pop()
+        print(nx,ny,nc,'turn to go')
 
         if able_togo(nx,ny,s) and not visited[nx+dx[s]][ny+dy[s]]: # 정방향 칸 확인
+            print('정방향',nx+dx[s],ny+dy[s],'통과')
             visited[nx+dx[s]][ny+dy[s]] = True
             cool[nx+dx[s]][ny+dy[s]] += nc - 1
             if nc - 1 > 1:
@@ -54,6 +55,8 @@ def spread_coolair(x,y,s): # 각 에어컨에 대해 차가운 공기 뿌리기
         for diff in [(s+1)%4, (s-1)%4]: # 45도 방향 칸 확인
 
             if able_togo(nx,ny,diff) and able_togo(nx+dx[diff], ny+dy[diff],s) and not visited[nx+dx[diff]+dx[s]][ny+dy[diff]+dy[s]]:
+                print('옆으로 틀기',nx+dx[s],ny+dy[s],'통과')
+
                 visited[nx+dx[s]+dx[diff]][ny+dy[s]+dy[diff]] = True
                 cool[nx+dx[s]+dx[diff]][ny+dy[s]+dy[diff]] += nc - 1
                 if nc - 1 > 1:
@@ -96,8 +99,11 @@ def check_office(): # 사무실의 모든 공간이 시원함 k를 만족하는�
 while time < 100:
     for x,y,s in airconditioners:
         spread_coolair(x,y,s)
+    print("after airconditioners",cool)
     mix_air()
+    print("after mixing air",cool)
     adjacent_walls()
+    print("after -1 walls",cool)
     time += 1
     if check_office():
         break
