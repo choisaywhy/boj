@@ -1,4 +1,8 @@
 # StudyLog
+#### 230830
+- CodeTree sam's 피자학교
+#### 230829
+- BOJ 실전 문제풀이 진행 중
 #### 230727
 - Gold Random Defence 진행 중
 #### 230713
